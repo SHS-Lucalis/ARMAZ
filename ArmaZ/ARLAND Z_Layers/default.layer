@@ -1,0 +1,84 @@
+SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 1891.659 11.576 1823.161
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "SCR_AIWorld: "\
+   "Configure navigation mesh"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 1891.659 11.438 1822.161
+}
+SCR_GameModeCampaign GameMode_Campaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Campaign.et" {
+ coords 1891.659 11.326 1821.161
+}
+SCR_CampaignFactionManager CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/MP/Campaign/CampaignFactionManager.et" {
+ coords 1891.659 11.714 1824.161
+ Factions {
+  SCR_CampaignFaction "{50B30C3AF4BFD934}" {
+   m_bIsPlayable 0
+   m_bIsCommanderAvailable 0
+   m_bCanCaptureBases 0
+  }
+  SCR_CampaignFaction "{56F0C3A6336375DC}" {
+   m_bIsPlayable 0
+  }
+  SCR_Faction "{60DCF47AEF40BD72}" {
+  }
+ }
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "CampaignFactionManager: "\
+   "Make sure one faction is non-playable to use for Independent units."
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+GenericEntity HQWest : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+ components {
+  SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+   Enabled 0
+  }
+  SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+   m_iSupplies 3000
+   m_iSuppliesMax 3000
+   m_fOperationalRadius 50.5
+  }
+  SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+   m_bIsSource 1
+  }
+  SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+   m_bCanBeHQ 1
+   m_bDisableWhenUnusedAsHQ 0
+   m_sBaseName "#AR-Campaign_MapLocation_MOB"
+   m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+  }
+ }
+ coords 3289.596 2.029 2886.64
+ angles 0 -127.419 0
+ {
+  $grp GenericEntity {
+   {
+    coords 16.639 -0.108 -9.357
+   }
+   {
+    coords 0 0 28.291
+   }
+  }
+ }
+}
+SCR_LoadoutManager CampaignLoadoutManager : "{58FBD035E53D95C1}Prefabs/MP/Campaign/CampaignLoadoutManager.et" {
+ coords 1891.659 11.959 1826.161
+}
